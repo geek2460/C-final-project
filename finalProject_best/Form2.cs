@@ -69,7 +69,7 @@ namespace finalProject_best
                 foreach (myclass m in 載入課程)
                 {
                     Console.WriteLine("課名:" + m.課名 + ", 年級:" + m.年級 +
-                        ", 學分:" + m.學分 + ", 必選" + m.學分 + ", 老師" + m.老師 +
+                        ", 學分:" + m.學分 + ", 必選" + m.必選 + ", 老師" + m.老師 +
                         ", 時間:" + m.時間
                     );
                 }
@@ -84,6 +84,7 @@ namespace finalProject_best
                 }
                 //再用result篩選出帳戶的必修課
                 List<myclass> final_result = result.FindAll(x => x.必選 == "必修");
+                Console.WriteLine("------------------------");
                 foreach (myclass m in final_result)
                 {
                     Console.WriteLine("課名:" + m.課名 + ", 年級:" + m.年級 +
@@ -93,45 +94,57 @@ namespace finalProject_best
                 }
                 //填入個人話課表array
                 //時間如果有跨天的話用"-"分開
+               
                 char[] delimiterChars_day = { '-' };
                 char[] delimiterChars_time = { ']', '[' };
+                Regex Validator = new Regex(@"^((\[[12345]\])[123456789]+-?)+$");
                 foreach (myclass m in final_result)
                 {
-                    string[] words = m.時間.Split(delimiterChars_day);
+                    
 
-                    //有"-"字元出現 表示有跨天
-                    foreach (string w in words)
+                    if (Validator.IsMatch( m.時間))
                     {
-                        //w = [5]123.... ; m.課名
+                        string[] words = m.時間.Split(delimiterChars_day);
 
-                        string[] letters = w.Split(delimiterChars_time);
-                        int start = 1, day = 0;
-                        foreach (string l in letters)
+                        //有"-"字元出現 表示有跨天
+                        foreach (string w in words)
                         {
-                            if (!string.IsNullOrWhiteSpace(l))
+                            //w = [5]123.... ; m.課名
+
+                            string[] letters = w.Split(delimiterChars_time);
+                            int start = 1, day = 0;
+                            foreach (string l in letters)
                             {
-                                // Console.WriteLine("-->" + l);
-                                //個人化課表
-                                if (start == 1)
+                                if (!string.IsNullOrWhiteSpace(l))
                                 {
-                                    day = Int32.Parse(l);
-                                    start++;
-                                }
-                                else
-                                {
-                                    Console.WriteLine("->" + day);
-                                    foreach (char c in l)
+                                    // Console.WriteLine("-->" + l);
+                                    //個人化課表
+                                    if (start == 1)
                                     {
-                                        if (Char.IsNumber(c) && day > 0 && day < 6)
+                                        day = Int32.Parse(l);
+                                        start++;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("->" + day);
+                                        foreach (char c in l)
                                         {
-                                            個人化課表[Convert.ToInt32(c) - 49, day - 1] = m.課名;
-                                            Console.WriteLine("time:" + c + ", day:" + day);
+
+                                            if (Char.IsNumber(c) && day > 0 && day < 6)
+                                            {
+                                                if (Convert.ToInt32(c) - 49 > 0 && Convert.ToInt32(c) - 49 <= 10)
+                                                {
+                                                    個人化課表[Convert.ToInt32(c) - 49, day - 1] = m.課名;
+                                                    Console.WriteLine("time:" + c + ", day:" + day);
+
+                                                }
+                                            }
                                         }
                                     }
+
                                 }
 
                             }
-
                         }
                     }
 
@@ -288,40 +301,43 @@ namespace finalProject_best
                     char[] delimiterChars_day = { '-' };
                     char[] delimiterChars_time = { ']', '[' };
                     string[] words = c.SubItems[5].Text.Split(delimiterChars_day);
+                    Regex Validator = new Regex(@"^((\[[12345]\])[123456789]+-?)+$");
 
-                    //有"-"字元出現 表示有跨天
-                    foreach (string w in words)
+                    if (Validator.IsMatch(c.SubItems[5].Text))
                     {
+                        //有"-"字元出現 表示有跨天
+                        foreach (string w in words)
+                        {
                         //w = [5]123.... ; m.課名
 
                         string[] letters = w.Split(delimiterChars_time);
                         int start = 1, day = 0;
-                        foreach (string l in letters)
-                        {
-                            if (!string.IsNullOrWhiteSpace(l))
+                            foreach (string l in letters)
                             {
-                                // Console.WriteLine("-->" + l);
-                                //個人化課表
-                                if (start == 1)
+                                if (!string.IsNullOrWhiteSpace(l))
                                 {
-                                    day = Int32.Parse(l);
-                                    start++;
-                                }
-                                else
-                                {
-                                    Console.WriteLine("->" + day);
-                                    foreach (char s in l)
+                                    // Console.WriteLine("-->" + l);
+                                    //個人化課表
+                                    if (start == 1)
                                     {
-                                        if (Char.IsNumber(s) && day > 0 && day < 6)
+                                        day = Int32.Parse(l);
+                                        start++;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("->" + day);
+                                        foreach (char s in l)
                                         {
-                                            個人化課表[Convert.ToInt32(s) - 49, day - 1] = classname;
-                                            Console.WriteLine("time:" + s + ", day:" + day);
+                                            if (Char.IsNumber(s) && day > 0 && day < 6)
+                                            {
+                                                個人化課表[Convert.ToInt32(s) - 49, day - 1] = classname;
+                                                Console.WriteLine("time:" + s + ", day:" + day);
+                                            }
                                         }
                                     }
+
                                 }
-
                             }
-
                         }
                     }
                     課表listView.Items.Clear();
@@ -619,7 +635,7 @@ namespace finalProject_best
                 }
                 string[] lines = File.ReadAllLines(@"課程心得\" + str + ".txt", System.Text.Encoding.Default);
                 
-                Form4 form4 = new Form4(lines);
+                Form4 form4 = new Form4(lines, 選課listView.SelectedItems[0].SubItems[0].Text.ToString());
                 form4.Show();
 
             }
@@ -634,7 +650,7 @@ namespace finalProject_best
             {
                 string str = 選課listView.SelectedItems[0].SubItems[7].Text.ToString();
                 
-                Form5 form5 = new Form5(str, my帳號);
+                Form5 form5 = new Form5(str, my帳號, 選課listView.SelectedItems[0].SubItems[0].Text.ToString());
                 form5.Show();
 
             }

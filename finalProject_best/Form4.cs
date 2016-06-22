@@ -13,10 +13,11 @@ namespace finalProject_best
     public partial class Form4 : Form
     {
         private string[] lines;
-        public Form4(string[] input_lines)
+        public Form4(string[] input_lines,string 課名)
         {
             InitializeComponent();
             lines = input_lines;
+            課名label.Text = 課名;
         }
 
         private void Form4_Load(object sender, EventArgs e)

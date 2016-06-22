@@ -15,11 +15,12 @@ namespace finalProject_best
     {
         public string s;
         public string t;
-        public Form5(string 課程碼,string 帳號)
+        public Form5(string 課程碼,string 帳號,string 課名)
         {
             InitializeComponent();
             s = 課程碼;
             t = 帳號;
+            課名label.Text = 課名;
         }
 
         private void 留下心得button_Click(object sender, EventArgs e)
@@ -34,12 +35,17 @@ namespace finalProject_best
                     {
                         fileStream.Close();
                     }
-                    File.WriteAllText(@"課程心得\" + s + ".txt", "@" + t + ": " + 留下心得richTextBox.Text);
+                    File.AppendAllText(@"課程心得\" + s + ".txt", "@" + t + ": " + 留下心得richTextBox.Text+"\n", System.Text.Encoding.Default);
                     this.Close();
                 }
 
             }
             
+        }
+
+        private void 留下心得richTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
