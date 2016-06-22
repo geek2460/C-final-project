@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             ""}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136))));
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             ""}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136))));
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             ""}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136))));
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             ""}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136))));
             this.上一步button = new System.Windows.Forms.Button();
             this.課表listView = new System.Windows.Forms.ListView();
@@ -68,6 +68,7 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.帳號label = new System.Windows.Forms.Label();
             this.載入課程label = new System.Windows.Forms.Label();
             this.載入系所listBox = new System.Windows.Forms.ListBox();
@@ -76,7 +77,6 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.查看心得button = new System.Windows.Forms.Button();
             this.留下心得button = new System.Windows.Forms.Button();
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.課表menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,10 +104,10 @@
             this.課表listView.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.課表listView.GridLines = true;
             this.課表listView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem13,
-            listViewItem14,
-            listViewItem15,
-            listViewItem16});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4});
             this.課表listView.Location = new System.Drawing.Point(513, 149);
             this.課表listView.Name = "課表listView";
             this.課表listView.Size = new System.Drawing.Size(548, 428);
@@ -336,6 +336,10 @@
             // 
             this.columnHeader7.Text = "地點";
             // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "課程碼";
+            // 
             // 帳號label
             // 
             this.帳號label.AutoSize = true;
@@ -418,10 +422,7 @@
             this.留下心得button.TabIndex = 12;
             this.留下心得button.Text = "留下心得";
             this.留下心得button.UseVisualStyleBackColor = true;
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Text = "課程碼";
+            this.留下心得button.Click += new System.EventHandler(this.留下心得button_Click);
             // 
             // Form2
             // 

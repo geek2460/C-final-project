@@ -11,3 +11,17 @@ C:\Users\kai\Desktop\finalProject_best\finalProject_best\obj\Debug\finalProject_
 C:\Users\kai\Desktop\finalProject_best\finalProject_best\obj\Debug\finalProject_best.Form3.resources
 C:\Users\kai\Desktop\finalProject_best\finalProject_best\obj\Debug\finalProject_best.csproj.ResolveComReference.cache
 C:\Users\kai\Desktop\finalProject_best\finalProject_best\obj\Debug\finalProject_best.Form4.resources
+C:\Users\kai\Desktop\finalProject_best\C-final-project\finalProject_best\bin\Debug\finalProject_best.exe.config
+C:\Users\kai\Desktop\finalProject_best\C-final-project\finalProject_best\obj\Debug\finalProject_best.csproj.ResolveComReference.cache
+C:\Users\kai\Desktop\finalProject_best\C-final-project\finalProject_best\obj\Debug\finalProject_best.exe
+C:\Users\kai\Desktop\finalProject_best\C-final-project\finalProject_best\obj\Debug\finalProject_best.pdb
+C:\Users\kai\Desktop\finalProject_best\C-final-project\finalProject_best\bin\Debug\finalProject_best.exe
+C:\Users\kai\Desktop\finalProject_best\C-final-project\finalProject_best\bin\Debug\finalProject_best.pdb
+C:\Users\kai\Desktop\finalProject_best\C-final-project\finalProject_best\obj\Debug\finalProject_best.csprojResolveAssemblyReference.cache
+C:\Users\kai\Desktop\finalProject_best\C-final-project\finalProject_best\obj\Debug\finalProject_best.Form1.resources
+C:\Users\kai\Desktop\finalProject_best\C-final-project\finalProject_best\obj\Debug\finalProject_best.Form2.resources
+C:\Users\kai\Desktop\finalProject_best\C-final-project\finalProject_best\obj\Debug\finalProject_best.Form3.resources
+C:\Users\kai\Desktop\finalProject_best\C-final-project\finalProject_best\obj\Debug\finalProject_best.Form4.resources
+C:\Users\kai\Desktop\finalProject_best\C-final-project\finalProject_best\obj\Debug\finalProject_best.Properties.Resources.resources
+C:\Users\kai\Desktop\finalProject_best\C-final-project\finalProject_best\obj\Debug\finalProject_best.csproj.GenerateResource.Cache
+C:\Users\kai\Desktop\finalProject_best\C-final-project\finalProject_best\obj\Debug\finalProject_best.Form5.resources

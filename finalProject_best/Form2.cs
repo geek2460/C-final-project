@@ -612,7 +612,7 @@ namespace finalProject_best
             if (選課listView.SelectedItems.Count >= 1)
             {
                 string str = 選課listView.SelectedItems[0].SubItems[7].Text.ToString();
-                string alllines;
+                
                 using (var fileStream = File.Open(@"課程心得\" + str + ".txt", FileMode.OpenOrCreate, FileAccess.ReadWrite))
                 {
                     fileStream.Close();
@@ -624,6 +624,22 @@ namespace finalProject_best
 
             }
             else {
+                MessageBox.Show("請選取載入後的要觀看心得的課程");
+            }
+        }
+
+        private void 留下心得button_Click(object sender, EventArgs e)
+        {
+            if (選課listView.SelectedItems.Count >= 1)
+            {
+                string str = 選課listView.SelectedItems[0].SubItems[7].Text.ToString();
+                
+                Form5 form5 = new Form5(str, my帳號);
+                form5.Show();
+
+            }
+            else
+            {
                 MessageBox.Show("請選取載入後的要觀看心得的課程");
             }
         }
