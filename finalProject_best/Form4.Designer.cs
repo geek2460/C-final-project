@@ -33,8 +33,9 @@
             // 
             // 心得richTextBox
             // 
+            this.心得richTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.心得richTextBox.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.心得richTextBox.Location = new System.Drawing.Point(25, 44);
+            this.心得richTextBox.Location = new System.Drawing.Point(25, 49);
             this.心得richTextBox.Name = "心得richTextBox";
             this.心得richTextBox.ReadOnly = true;
             this.心得richTextBox.Size = new System.Drawing.Size(469, 320);
@@ -46,6 +47,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(533, 395);
             this.Controls.Add(this.心得richTextBox);
             this.Name = "Form4";

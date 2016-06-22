@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             ""}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136))));
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             ""}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136))));
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             ""}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136))));
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             ""}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136))));
             this.上一步button = new System.Windows.Forms.Button();
             this.課表listView = new System.Windows.Forms.ListView();
@@ -89,11 +89,13 @@
             this.上一步button.TabIndex = 0;
             this.上一步button.Text = "上一步";
             this.上一步button.UseVisualStyleBackColor = true;
+            this.上一步button.Visible = false;
             this.上一步button.Click += new System.EventHandler(this.上一步button_Click);
             // 
             // 課表listView
             // 
             this.課表listView.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid;
+            this.課表listView.BackColor = System.Drawing.SystemColors.Info;
             this.課表listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader13,
             this.columnHeader8,
@@ -104,10 +106,10 @@
             this.課表listView.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.課表listView.GridLines = true;
             this.課表listView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4});
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8});
             this.課表listView.Location = new System.Drawing.Point(513, 149);
             this.課表listView.Name = "課表listView";
             this.課表listView.Size = new System.Drawing.Size(548, 428);
@@ -161,6 +163,7 @@
             // 
             // 選課ToolStripMenuItem
             // 
+            this.選課ToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.選課ToolStripMenuItem.CheckOnClick = true;
             this.選課ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripTextBox1,
@@ -176,6 +179,7 @@
             // 
             // toolStripTextBox1
             // 
+            this.toolStripTextBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.toolStripTextBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.toolStripTextBox1.HideSelection = false;
             this.toolStripTextBox1.Name = "toolStripTextBox1";
@@ -190,6 +194,7 @@
             // 
             // toolStripTextBox2
             // 
+            this.toolStripTextBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.toolStripTextBox2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.toolStripTextBox2.HideSelection = false;
             this.toolStripTextBox2.Name = "toolStripTextBox2";
@@ -214,6 +219,8 @@
             // 
             // 輸出課表ToolStripMenuItem
             // 
+            this.輸出課表ToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.輸出課表ToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.輸出課表ToolStripMenuItem.Name = "輸出課表ToolStripMenuItem";
             this.輸出課表ToolStripMenuItem.Size = new System.Drawing.Size(122, 35);
             this.輸出課表ToolStripMenuItem.Text = "輸出課表";
@@ -221,6 +228,8 @@
             // 
             // 登出ToolStripMenuItem
             // 
+            this.登出ToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.登出ToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.登出ToolStripMenuItem.Name = "登出ToolStripMenuItem";
             this.登出ToolStripMenuItem.Size = new System.Drawing.Size(74, 35);
             this.登出ToolStripMenuItem.Text = "登出";
@@ -228,19 +237,23 @@
             // 
             // 刪除課表課程ToolStripMenuItem
             // 
-            this.刪除課表課程ToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
+            this.刪除課表課程ToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.刪除課表課程ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox1,
             this.toolStripSeparator3,
             this.toolStripComboBox2,
             this.toolStripSeparator4,
             this.確定移除ToolStripMenuItem});
+            this.刪除課表課程ToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.刪除課表課程ToolStripMenuItem.Name = "刪除課表課程ToolStripMenuItem";
             this.刪除課表課程ToolStripMenuItem.Size = new System.Drawing.Size(170, 35);
             this.刪除課表課程ToolStripMenuItem.Text = "刪除課表課程";
+            this.刪除課表課程ToolStripMenuItem.Click += new System.EventHandler(this.刪除課表課程ToolStripMenuItem_Click);
             // 
             // toolStripComboBox1
             // 
+            this.toolStripComboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.toolStripComboBox1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.toolStripComboBox1.Items.AddRange(new object[] {
             "星期一",
             "星期二",
@@ -248,7 +261,8 @@
             "星期四",
             "星期五"});
             this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 24);
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 32);
+            this.toolStripComboBox1.Text = "下拉選擇星期";
             this.toolStripComboBox1.Click += new System.EventHandler(this.toolStripComboBox1_Click_2);
             // 
             // toolStripSeparator3
@@ -258,6 +272,8 @@
             // 
             // toolStripComboBox2
             // 
+            this.toolStripComboBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.toolStripComboBox2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.toolStripComboBox2.Items.AddRange(new object[] {
             "1",
             "2",
@@ -270,7 +286,8 @@
             "9",
             "10"});
             this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 24);
+            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 32);
+            this.toolStripComboBox2.Text = "下拉選擇節次";
             // 
             // toolStripSeparator4
             // 
@@ -288,6 +305,7 @@
             // 
             // 選課listView
             // 
+            this.選課listView.BackColor = System.Drawing.SystemColors.Info;
             this.選課listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -343,7 +361,9 @@
             // 帳號label
             // 
             this.帳號label.AutoSize = true;
+            this.帳號label.BackColor = System.Drawing.SystemColors.HotTrack;
             this.帳號label.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.帳號label.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.帳號label.Location = new System.Drawing.Point(675, 9);
             this.帳號label.Name = "帳號label";
             this.帳號label.Size = new System.Drawing.Size(42, 21);
@@ -376,24 +396,26 @@
             // 
             // 載入button
             // 
+            this.載入button.BackColor = System.Drawing.Color.White;
             this.載入button.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.載入button.Location = new System.Drawing.Point(156, 76);
             this.載入button.Name = "載入button";
             this.載入button.Size = new System.Drawing.Size(67, 67);
             this.載入button.TabIndex = 9;
             this.載入button.Text = "載入";
-            this.載入button.UseVisualStyleBackColor = true;
+            this.載入button.UseVisualStyleBackColor = false;
             this.載入button.Click += new System.EventHandler(this.載入button_Click);
             // 
             // 加入button
             // 
+            this.加入button.BackColor = System.Drawing.Color.White;
             this.加入button.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.加入button.Location = new System.Drawing.Point(446, 253);
             this.加入button.Name = "加入button";
             this.加入button.Size = new System.Drawing.Size(61, 65);
             this.加入button.TabIndex = 10;
             this.加入button.Text = "加入課程";
-            this.加入button.UseVisualStyleBackColor = true;
+            this.加入button.UseVisualStyleBackColor = false;
             this.加入button.Click += new System.EventHandler(this.加入button_Click);
             // 
             // imageList1
@@ -428,6 +450,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1073, 589);
             this.Controls.Add(this.留下心得button);
             this.Controls.Add(this.查看心得button);

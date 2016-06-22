@@ -76,13 +76,15 @@
             // 
             // 登入button
             // 
+            this.登入button.BackColor = System.Drawing.Color.White;
             this.登入button.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.登入button.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.登入button.Location = new System.Drawing.Point(375, 75);
             this.登入button.Name = "登入button";
             this.登入button.Size = new System.Drawing.Size(121, 53);
             this.登入button.TabIndex = 4;
             this.登入button.Text = "登入";
-            this.登入button.UseVisualStyleBackColor = true;
+            this.登入button.UseVisualStyleBackColor = false;
             this.登入button.Click += new System.EventHandler(this.登入button_Click);
             // 
             // 註冊button
@@ -105,12 +107,14 @@
             this.下一步button.TabIndex = 6;
             this.下一步button.Text = "下一步";
             this.下一步button.UseVisualStyleBackColor = true;
+            this.下一步button.Visible = false;
             this.下一步button.Click += new System.EventHandler(this.下一步button_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(586, 294);
             this.Controls.Add(this.下一步button);
             this.Controls.Add(this.註冊button);

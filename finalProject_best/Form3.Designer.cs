@@ -49,10 +49,12 @@
             this.註冊成功button.TabIndex = 0;
             this.註冊成功button.Text = "註冊成功";
             this.註冊成功button.UseVisualStyleBackColor = true;
+            this.註冊成功button.Visible = false;
             this.註冊成功button.Click += new System.EventHandler(this.註冊成功button_Click);
             // 
             // 帳號textBox
             // 
+            this.帳號textBox.BackColor = System.Drawing.SystemColors.Info;
             this.帳號textBox.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.帳號textBox.Location = new System.Drawing.Point(339, 53);
             this.帳號textBox.MaxLength = 10;
@@ -62,6 +64,7 @@
             // 
             // 密碼textBox
             // 
+            this.密碼textBox.BackColor = System.Drawing.SystemColors.Info;
             this.密碼textBox.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.密碼textBox.Location = new System.Drawing.Point(339, 117);
             this.密碼textBox.MaxLength = 20;
@@ -111,17 +114,19 @@
             // 
             // 註冊button
             // 
+            this.註冊button.BackColor = System.Drawing.Color.White;
             this.註冊button.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.註冊button.Location = new System.Drawing.Point(294, 294);
             this.註冊button.Name = "註冊button";
             this.註冊button.Size = new System.Drawing.Size(190, 52);
             this.註冊button.TabIndex = 7;
             this.註冊button.Text = "註冊";
-            this.註冊button.UseVisualStyleBackColor = true;
+            this.註冊button.UseVisualStyleBackColor = false;
             this.註冊button.Click += new System.EventHandler(this.註冊button_Click);
             // 
             // 系所listBox
             // 
+            this.系所listBox.BackColor = System.Drawing.SystemColors.Info;
             this.系所listBox.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.系所listBox.FormattingEnabled = true;
             this.系所listBox.ItemHeight = 35;
@@ -136,6 +141,7 @@
             // 
             // 年級listBox
             // 
+            this.年級listBox.BackColor = System.Drawing.SystemColors.Info;
             this.年級listBox.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.年級listBox.FormattingEnabled = true;
             this.年級listBox.ItemHeight = 35;
@@ -153,6 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(709, 382);
             this.Controls.Add(this.年級listBox);
             this.Controls.Add(this.系所listBox);

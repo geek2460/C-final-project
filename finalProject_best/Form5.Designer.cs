@@ -34,6 +34,7 @@
             // 
             // 留下心得richTextBox
             // 
+            this.留下心得richTextBox.BackColor = System.Drawing.SystemColors.Info;
             this.留下心得richTextBox.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.留下心得richTextBox.Location = new System.Drawing.Point(31, 64);
             this.留下心得richTextBox.MaxLength = 300;
@@ -44,19 +45,21 @@
             // 
             // 留下心得button
             // 
+            this.留下心得button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.留下心得button.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.留下心得button.Location = new System.Drawing.Point(358, 22);
             this.留下心得button.Name = "留下心得button";
             this.留下心得button.Size = new System.Drawing.Size(105, 36);
             this.留下心得button.TabIndex = 1;
             this.留下心得button.Text = "送出";
-            this.留下心得button.UseVisualStyleBackColor = true;
+            this.留下心得button.UseVisualStyleBackColor = false;
             this.留下心得button.Click += new System.EventHandler(this.留下心得button_Click);
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(500, 353);
             this.Controls.Add(this.留下心得button);
             this.Controls.Add(this.留下心得richTextBox);

@@ -643,6 +643,11 @@ namespace finalProject_best
                 MessageBox.Show("請選取載入後的要觀看心得的課程");
             }
         }
+
+        private void 刪除課表課程ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     
