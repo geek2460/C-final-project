@@ -35,7 +35,7 @@ namespace finalProject_best
                     {
                         fileStream.Close();
                     }
-                    File.AppendAllText(@"課程心得\" + s + ".txt", "@" + t + ": " + 留下心得richTextBox.Text+"\n", System.Text.Encoding.Default);
+                    File.AppendAllText(@"課程心得\" + s + ".txt", "@" + t + ": " + 留下心得richTextBox.Text+ Environment.NewLine, System.Text.Encoding.Default);
                     this.Close();
                 }
 

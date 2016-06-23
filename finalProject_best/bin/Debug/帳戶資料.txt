@@ -23,4 +23,7 @@ F111 111 資訊系 2 False
 5 5 資訊系 2 False
 4 4 資訊系 3 False
 6 6 資訊系 4 False
-78 789 資訊系 4 false
+78 789 資訊系 4 False
+F74012789 123 資訊系 1 False
+F789 789 資訊系 3 False
+96 96 資訊系 3 false

@@ -25,7 +25,7 @@ namespace finalProject_best
             心得richTextBox.Text = "";
             foreach (string s in lines)
             {
-                心得richTextBox.Text += s;
+                心得richTextBox.Text += s+ Environment.NewLine;
             }
             
            
